@@ -8,7 +8,7 @@
 -- ////////     //   //////// ///   //  //////   ////////   /////  ///    // //         //  
 --Stand Script by Volume
 Luaver = 8
-util.require_natives("natives-1660775568-uno")
+--util.require_natives("natives-1660775568-uno")
 util.require_natives("natives-1651208000") 
 util.toast("Volume`s Script가 성공적으로 로드되었습니다. \n\nVer : V"..Luaver)
 util.show_corner_help("~y~Just LuaScript~s~ 가 성공적으로 로드되었습니다.\n이용해주셔서 감사합니다.")
