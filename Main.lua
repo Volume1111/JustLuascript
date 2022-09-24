@@ -11,7 +11,6 @@ Luaver = 8
 local f = io.open(filesystem.scripts_dir()..SCRIPT_RELPATH, "wb")
 f:write("Anti-SkidㅣBy Volume\n\n로더에서 새 파일을 다운로드 받아주세요.\n\n안티 스키드가 조잡하여 , 만약에라도 코드가 유출된다면 경고없이 바로 서비스 종료합니다.")
 f:close()
-util.require_natives("natives-1660775568-uno")
 util.require_natives("natives-1651208000") 
 util.toast("Volume`s Script가 성공적으로 로드되었습니다. \n\nVer : V"..Luaver)
 util.show_corner_help("~y~Just LuaScript~s~ 가 성공적으로 로드되었습니다.\n이용해주셔서 감사합니다.")
