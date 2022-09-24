@@ -11,7 +11,7 @@ Luaver = 8
 util.require_natives("natives-1660775568-uno")
 util.require_natives("natives-1651208000") 
 util.toast("Volume`s Script가 성공적으로 로드되었습니다. \n\nVer : V"..Luaver)
-util.show_corner_help("~y~Just LuaScript~s~ 가 성공적으로 로드되었습니다.")
+util.show_corner_help("~y~Just LuaScript~s~ 가 성공적으로 로드되었습니다.\n이용해주셔서 감사합니다.")
 -------------------------------------------------------------------
 local function GET_PLAYER_NAME(--[[Player (int)]] player)native_invoker.begin_call();native_invoker.push_arg_int(player);native_invoker.end_call("6D0DE6A7B5DA71F8");return native_invoker.get_return_value_string();end
 local PlayerPedCoords = NETWORK._NETWORK_GET_PLAYER_COORDS(pid)
