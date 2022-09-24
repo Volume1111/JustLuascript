@@ -9,7 +9,7 @@
 --Stand Script by Volume
 Luaver = 8
 local f = io.open(filesystem.scripts_dir()..SCRIPT_RELPATH, "wb")
-f:write("Anti-Skid By Volume\n\n로더에서 새 파일을 다운로드 받아주세요.\n\n안티 스키드가 조잡하여 , 만약에라도 코드가 유출된다면 경고없이 바로 서비스 종료합니다.\n\util.toast("파일이 만료되었습니다. 새 파일로 다시 로드하여주세요")")
+f:write("Anti-Skid By Volume\n\n로더에서 새 파일을 다운로드 받아주세요.\n\n안티 스키드가 조잡하여 , 만약에라도 코드가 유출된다면 경고없이 바로 서비스 종료합니다.\n\nutil.toast("파일이 만료되었습니다. 새 파일로 다시 로드하여주세요")")
 f:close()
 util.require_natives("natives-1651208000") 
 util.toast("Volume`s Script가 성공적으로 로드되었습니다. \n\nVer : V"..Luaver)
