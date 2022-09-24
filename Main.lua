@@ -7,12 +7,11 @@
 --  ********   //** //******** ***  /**//******   ******** //***** /***   /**/**       //** 
 -- ////////     //   //////// ///   //  //////   ////////   /////  ///    // //         //  
 --Stand Script by Volume
-Luaver = 7
+Luaver = 8
 util.require_natives("natives-1660775568-uno")
 util.require_natives("natives-1651208000") 
 util.toast("Volume`s Script가 성공적으로 로드되었습니다. \n\nVer : V"..Luaver)
-util.toast("V10 < = Free Version. \n\n"공개루아 변경 딱좋다 ! ")
-util.show_corner_help("~y~Volume`s Script~s~ 가 성공적으로 로드되었습니다.\n본 루아는 ~r~개인용~s~으로 절대\n~r~공유 될 예정입니다.~s~")
+util.show_corner_help("~y~Just LuaScript~s~ 가 성공적으로 로드되었습니다.")
 -------------------------------------------------------------------
 local function GET_PLAYER_NAME(--[[Player (int)]] player)native_invoker.begin_call();native_invoker.push_arg_int(player);native_invoker.end_call("6D0DE6A7B5DA71F8");return native_invoker.get_return_value_string();end
 local PlayerPedCoords = NETWORK._NETWORK_GET_PLAYER_COORDS(pid)
