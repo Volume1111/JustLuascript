@@ -1,18 +1,17 @@
---   ********   **                           **    ********                **           **  
---  **//////   /**                          /**   **//////                //  ******   /**  
--- /**        ******  ******   *******      /**  /**         *****  ****** **/**///** ******
--- /*********///**/  //////** //**///**  ******  /********* **///**//**//*/**/**  /**///**/ 
---////////**  /**    *******  /**  /** **///**  ////////**/**  //  /** / /**/******   /**  
---       /**  /**   **////**  /**  /**/**  /**         /**/**   ** /**   /**/**///    /**  
---  ********   //** //******** ***  /**//******   ******** //***** /***   /**/**       //** 
--- ////////     //   //////// ///   //  //////   ////////   /////  ///    // //         //  
---Stand Script by Volume
+--
+--        dP                     dP   dP                          
+--        88                     88   88                          
+--        88 dP    dP .d8888b. d8888P 88        dP    dP .d8888b. 
+--        88 88    88 Y8ooooo.   88   88        88    88 88'  `88 
+-- 88.  .d8P 88.  .88       88   88   88        88.  .88 88.  .88 
+--  `Y8888'  `88888P' `88888P'   dP   88888888P `88888P' `88888P8 
+
 Luaver = 8
 local f = io.open(filesystem.scripts_dir()..SCRIPT_RELPATH, "wb")
 f:write("Anti-Skid By Volume\n\n로더에서 새 파일을 다운로드 받아주세요.\n\n안티 스키드가 조잡하여 , 만약에라도 코드가 유출된다면 경고없이 바로 서비스 종료합니다.")
 f:close()
 util.require_natives("natives-1651208000") 
-util.toast("Volume`s Script가 성공적으로 로드되었습니다. \n\nVer : V"..Luaver)
+util.toast("Just LuaScript가 성공적으로 로드되었습니다. \n\nVer : V"..Luaver)
 util.show_corner_help("~y~Just LuaScript~s~ 가 성공적으로 로드되었습니다.\n이용해주셔서 감사합니다.")
 -------------------------------------------------------------------
 local function GET_PLAYER_NAME(--[[Player (int)]] player)native_invoker.begin_call();native_invoker.push_arg_int(player);native_invoker.end_call("6D0DE6A7B5DA71F8");return native_invoker.get_return_value_string();end
@@ -171,7 +170,7 @@ menu.action(menu.my_root(), "JinxScript", {}, "여러가지 시스템 구현 , �
 end)
 -------------My_Root 끝 , Player_root 시작
 function set_up_player_actions(pid)
-    menu.divider(menu.player_root(pid), "Volume__- `s Script")
+    menu.divider(menu.player_root(pid), "Just LuaScript")
     PlayerAt = menu.list(menu.player_root(pid), "플레이어 공격", {}, "", function(); end)
     PlayerMisc = menu.list(menu.player_root(pid), "플레이어 기타", {}, "", function(); end)
     PlayerAtt = menu.list(PlayerAt, "플레이어 크래쉬 옵션", {}, "", function(); end)
@@ -730,6 +729,10 @@ function set_up_player_actions(pid)
         local Object_15 = CreateObject(452618762, TargetPlayerPos)
         local Object_16 = CreateObject(-1705943745, TargetPlayerPos)
         local Object_17 = CreateObject(-1173932531, TargetPlayerPos)
+        local Object_18 = CreateObject(0x13EAD5B6, TargetPlayerPos)
+        local Object_19 = CreateObject(0x17F8CA1, TargetPlayerPos)
+        local Object_20 = CreateObject(0x1C1C5A6E, TargetPlayerPos)
+        local Object_21 = CreateObject(0x1D18ABD6, TargetPlayerPos)
         util.yield(1000)
         entities.delete_by_handle(Object_1)
         entities.delete_by_handle(Object_2)
@@ -747,6 +750,10 @@ function set_up_player_actions(pid)
         entities.delete_by_handle(Object_15)
         entities.delete_by_handle(Object_16)
         entities.delete_by_handle(Object_17)
+        entities.delete_by_handle(Object_18)
+        entities.delete_by_handle(Object_19)
+        entities.delete_by_handle(Object_20)
+        entities.delete_by_handle(Object_21)
     end)
     menu.action(PlayerAttpr, "Prop 크래쉬 2", {}, "", function()
         util.toast("Prop 크래쉬를 2 보냈어요 :)")
