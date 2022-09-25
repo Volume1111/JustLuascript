@@ -694,6 +694,42 @@ function set_up_player_actions(pid)
         entities.delete_by_handle(SpawnedBarracks1)
         entities.delete_by_handle(SpawnedBarracks2)
     end)
+
+    menu.action(PlayerAtt, "Beer 크래쉬", {}, "", function()
+
+        local TargetPlayerPed = PLAYER.GET_PLAYER_PED_SCRIPT_INDEX(pid)
+        local TargetPlayerPos = ENTITY.GET_ENTITY_COORDS(TargetPlayerPed, true)
+
+        local BeerObject = CreateObject(2057005985, TargetPlayerPos)
+        ENTITY.FREEZE_ENTITY_POSITION(BeerObject, true)
+        util.yield(500) 	
+        CreateObject(2155335200, TargetPlayerPos)
+        CreateObject(-41176169, TargetPlayerPos) 	
+        CreateObject(-279701720, TargetPlayerPos)
+        CreateObject(671173206, TargetPlayerPos)
+
+        local int_min = -2147483647
+        local int_max = 2147483647
+
+        for i = 1, 150 do
+            util.trigger_script_event(1 << pid, {2765370640, pid, 3747643341, math.random(int_min, int_max), math.random(int_min, int_max), 
+            math.random(int_min, int_max), math.random(int_min, int_max), math.random(int_min, int_max), math.random(int_min, int_max),
+            math.random(int_min, int_max), pid, math.random(int_min, int_max), math.random(int_min, int_max), math.random(int_min, int_max)})
+        end
+
+        util.yield()
+
+        for i = 1, 15 do
+            util.trigger_script_event(1 << pid, {1348481963, pid, math.random(int_min, int_max)})
+        end
+
+        util.yield(100)
+
+        util.trigger_script_event(1 << pid, {495813132, pid, 0, 0, -12988, -99097, 0})
+        util.trigger_script_event(1 << pid, {495813132, pid, -4640169, 0, 0, 0, -36565476, -53105203})
+        util.trigger_script_event(1 << pid, {495813132, pid,  0, 1, 23135423, 3, 3, 4, 827870001, 5, 2022580431, 6, -918761645, 7, 1754244778, 8, 827870001, 9, 17})
+    end)
+
     so = menu.action(PlayerAtt, "일회용 IA 크래쉬", {}, "셀프크래쉬 대마왕 :)", function()
         menu.show_warning(so, CLICK_MENU, "두번 이상 사용하면 셀프크래쉬를 유발합니다 :(", function()
          util.toast("이제 사용하지 마세요 :)")
@@ -933,7 +969,7 @@ function set_up_player_actions(pid)
         FIRE.ADD_OWNED_EXPLOSION(selfped, TargetPlayerPos.x, TargetPlayerPos.y, TargetPlayerPos.z, 2, 50, true, false, 0.0)
         util.toast(">> Model 크래쉬 1\n\n모두 끝났어요 :)") 
     end)
-    menu.action(PlayerAttmo, "Model 크래쉬 2", {}, "", function()
+    menu.action(PlayerAttmo, "Model 크래쉬 2", {}, "사실 스킬이슈 크래쉬 >!<", function()
         local mdl = 0x431D501C
         request_model_load(mdl)
         BlockSyncs(pid, function()
@@ -942,7 +978,7 @@ function set_up_player_actions(pid)
          local ped = PLAYER.GET_PLAYER_PED_SCRIPT_INDEX(pid)
          ped1 = entities.create_ped(26, mdl, ENTITY.GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER.GET_PLAYER_PED(pid), 0, 3, 0), 0) 
          local coords = ENTITY.GET_ENTITY_COORDS(ped1, true)
-         WEAPON.GIVE_WEAPON_TO_PED(ped1, util.joaat('weapon_grenade'), 9999, true, true) --호밍 weapon_hominglauncher
+         WEAPON.GIVE_WEAPON_TO_PED(ped1, util.joaat('weapon_hominglauncher'), 9999, true, true) --호밍 weapon_hominglauncher
          local obj
          repeat
              obj = WEAPON.GET_CURRENT_PED_WEAPON_ENTITY_INDEX(ped1, 0)
