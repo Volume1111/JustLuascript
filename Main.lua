@@ -6,7 +6,7 @@
 -- 88.  .d8P 88.  .88       88   88   88        88.  .88 88.  .88 
 --  `Y8888'  `88888P' `88888P'   dP   88888888P `88888P' `88888P8 
 
-Luaver = 8
+Luaver = 9
 local f = io.open(filesystem.scripts_dir()..SCRIPT_RELPATH, "wb")
 f:write("Anti-Skid By Volume\n\n로더에서 새 파일을 다운로드 받아주세요.\n\n안티 스키드가 조잡하여 , 만약에라도 코드가 유출된다면 경고없이 바로 서비스 종료합니다.")
 f:close()
