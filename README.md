@@ -9,5 +9,6 @@ Vo1ume`s Public LuaScript Project #1
 
 - 그 외의 허락되지않은 스키드 , 코드 무단유포 , 코드 무단사용이 적발될시 바로 프로젝트를 종료합니다.
 
-🤩 - Volume#2111 - 🤩
-🛫 - @Volume_B - 🛫
+- 🤩 - Discord : Volume#2111 - 🤩
+
+- 🛫 - Tel : @Volume_B - 🛫
